@@ -1,5 +1,6 @@
 # データベースにアクセスするためのライブラリを読み込む
 require 'active_record'
+#require 'sinatra-activerecord'
 
 # プログラムを定期実行するためのライブラリを読み込む
 require 'eventmachine'
@@ -11,10 +12,14 @@ require_relative 'Fetcher'
 #require_relative 'Pusher'
 
 # TODO: データベースの初期化
-ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'sqlite3://localhost/event.db')
+#DATABASE_URL='postgresql://localhost/myapp.db'
+#ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgresql://localhost/news')
+ActiveRecord::Base.establish_connection('postgresql://localhost/news')
 
-class Event < ActiveRecord::Base
+class News < ActiveRecord::Base
 end
+
+puts News.count
 
 puts 'record created'
 

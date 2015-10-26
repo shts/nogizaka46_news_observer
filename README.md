@@ -4,6 +4,12 @@ News feed observer
 NEWSフィードを監視するスクリプト
 
 ### 現象うまく動作しない
+
+
+http://sasuke.main.jp/postgrescmd.html
+http://www.atmarkit.co.jp/ait/articles/0010/19/news002.html
+
+
 DBのマイグレーションでこける
 
 これが一番わかりやすいかも
@@ -40,7 +46,10 @@ sqlファイルからsqlを実行
 
 http://rktsqlite.osdn.jp/sqlite/manip.html#select
 
+###
 
+Script: Run
+cmd-i
 
 ### rubyのクラス定義に関する参考資料
 

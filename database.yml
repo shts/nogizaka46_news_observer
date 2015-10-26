@@ -1,0 +1,6 @@
+development:
+  adapter: sqlite3
+  database: news
+production:
+  adapter: postgresql
+  database: news

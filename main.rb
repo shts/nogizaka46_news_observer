@@ -1,6 +1,7 @@
 # データベースにアクセスするためのライブラリを読み込む
-require 'active_record'
+
 #require 'sinatra-activerecord'
+require 'active_record'
 
 # プログラムを定期実行するためのライブラリを読み込む
 require 'eventmachine'
@@ -14,7 +15,8 @@ require_relative 'Fetcher'
 # TODO: データベースの初期化
 #DATABASE_URL='postgresql://localhost/myapp.db'
 #ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgresql://localhost/news')
-ActiveRecord::Base.establish_connection('postgresql://localhost/news')
+#ActiveRecord::Base.establish_connection('postgresql://localhost/news')
+ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'sqlite3://localhost/myapp.db')
 
 class News < ActiveRecord::Base
 end

@@ -1,6 +1,8 @@
 Nogizaka46 News observer
 ===
 
+アプリのダッシュボード
+https://dashboard.heroku.com/apps/nogizaka46-news-observer/resources
 
 ### postgresql連携
 

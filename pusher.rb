@@ -7,11 +7,10 @@ Parse.init :application_id => ENV['PARSE_APP_ID'],
 
 class Pusher
 
-  def self.push(category, calendardata, filename, url)
+  def self.push(url, category, title)
     data = { :action=> "android.shts.jp.nogifeed.UPDATE_NEWS",
              :_category => category,
-             :_calendardata => calendardata,
-             :_filename => filename,
+             :_title => title,
              :_url => url }
     push = Parse::Push.new(data)
     push.where = { :deviceType => "android" }

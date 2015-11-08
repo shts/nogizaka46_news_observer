@@ -1,6 +1,7 @@
 development:
-  adapter: sqlite3
-  database: news
-production:
   adapter: postgresql
-  database: news
+  database: d3o8h26r69848d
+  pool: 5
+  host: ec2-54-83-29-15.compute-1.amazonaws.com
+  username: qqnmnnlpuesauu
+  password: RvcrEFVxUr34aMWV1DWoiKqUcJ

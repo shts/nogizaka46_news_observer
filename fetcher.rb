@@ -1,3 +1,4 @@
+
 # URLにアクセスするためのライブラリを読み込む
 require 'open-uri'
 
@@ -21,4 +22,5 @@ class Fetcher
     end
 
   end
+
 end

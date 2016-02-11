@@ -27,7 +27,7 @@ class Articles < ActiveRecord::Base; end
 def push(url, category)
   # 新着ニュースURLがhttpスキーマであればニュースタイトルを取得する
   if url.start_with?("http://") then
-    doc = Nokogiri::HTML(open(url))
+    doc = Nokogiri::HTML(open(url, 'User-Agent' => 'ruby'))
     title = doc.css('head').css('title').text.gsub("...｜ニュース｜乃木坂46公式サイト", "")
     Pusher.push(url, category, title)
   end

@@ -11,7 +11,7 @@ class Fetcher
 
     # RSSフィードを取得する
     url = 'http://img.nogizaka46.com/calendar/allnews.xml'
-    xml = open(url)
+    xml = open(url, 'User-Agent' => 'ruby')
 
     # 取得したフィード(XML)の読み込み
     doc = REXML::Document.new(open(xml))
